@@ -20,7 +20,7 @@ const slides = [
   {
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/83509869-f90f-4933-8bf2-ca5e3d6ade4f-sipasen-vercel-app/assets/images/images_5.png",
     subtitle: "Développement Durable",
-    title: <>L'Avenir de l'Isolation <span className="italic-primary font-display italic text-brand-beige">Thermique</span></>,
+    title: <>L&apos;Avenir de l&apos;Isolation <span className="italic-primary font-display italic text-brand-beige">Thermique</span></>,
     description: "Optimisez l'efficacité énergétique de vos bâtiments avec nos plaques de polystyrène expansé haute densité."
   }
 ];
@@ -36,7 +36,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative h-[90vh] md:h-screen min-h-[700px] w-full overflow-hidden bg-brand-grey">
+    <section className="relative h-[clamp(640px,94svh,980px)] w-full overflow-hidden bg-brand-grey">
       {/* Slides */}
       {slides.map((slide, index) => (
         <div 
@@ -59,10 +59,10 @@ const Hero = () => {
           </div>
 
             {/* Content Container */}
-            <div className="relative h-full container mx-auto px-6 md:px-10 flex flex-col pt-40 md:pt-64 justify-center z-10">
+            <div className="relative z-10 container mx-auto flex h-full flex-col justify-start px-6 pt-[clamp(9rem,18vh,12rem)] pb-[clamp(6.5rem,14vh,9.5rem)] md:px-10 md:pt-[clamp(10rem,20vh,14rem)] md:pb-[clamp(7rem,13vh,10rem)]">
               <div className={`max-w-[850px] transition-all duration-1000 delay-300 ${index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
               {/* Subheading */}
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 mb-10 md:mb-12">
                 <div className="w-10 h-[2px] bg-brand-beige"></div>
                 <span className="text-white text-[12px] font-extrabold tracking-[0.4em] uppercase">
                   {slide.subtitle}
@@ -70,17 +70,17 @@ const Hero = () => {
               </div>
 
               {/* Headline */}
-              <h1 className="font-display text-5xl md:text-7xl lg:text-[100px] font-bold text-white mb-10 leading-[0.9] tracking-tighter">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[88px] font-bold text-white mb-8 md:mb-10 leading-[0.92] tracking-tighter">
                 {slide.title}
               </h1>
 
               {/* Body Text */}
-              <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-12 font-sans leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-white/80 max-w-2xl mb-8 md:mb-10 font-sans leading-relaxed">
                 {slide.description}
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+              <div className="flex flex-wrap items-start gap-4 md:gap-6">
                 <a 
                   href="#produits" 
                   className="btn-primary px-10 py-5 text-[12px]"
@@ -109,7 +109,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Navigation Indicators */}
-      <div className="absolute bottom-12 left-6 md:left-16 flex items-center gap-4 z-20">
+      <div className="absolute bottom-[clamp(1rem,2.5vh,2rem)] right-6 md:right-16 flex items-center gap-4 z-20">
         {slides.map((_, index) => (
           <button 
             key={index}

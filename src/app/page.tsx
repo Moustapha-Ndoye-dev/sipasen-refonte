@@ -1,5 +1,3 @@
-"use client";
-
 import Header from "@/components/sections/header";
 import Hero from "@/components/sections/hero";
 import AboutSection from "@/components/sections/about";
@@ -9,21 +7,26 @@ import ExportSection from "@/components/sections/export";
 import StatsSection from "@/components/sections/stats";
 import ContactSection from "@/components/sections/contact";
 import Footer from "@/components/sections/footer";
+import { readStore } from "@/lib/admin-store";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const store = await readStore();
+
   return (
     <div className="flex min-h-screen flex-col">
-      <Header />
+      <Header contactEmail={store.siteContent.contact.email} />
       <main className="flex-grow">
         <Hero />
         <AboutSection />
         <ExpertiseSection />
         <ExcellenceSection />
         <ExportSection />
-        <StatsSection />
-        <ContactSection />
+        <StatsSection statsConfig={store.siteContent.stats} />
+        <ContactSection contact={store.siteContent.contact} />
       </main>
-      <Footer />
+      <Footer contact={store.siteContent.contact} />
     </div>
   );
 }

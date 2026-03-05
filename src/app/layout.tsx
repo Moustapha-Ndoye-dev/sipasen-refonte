@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { VisualEditsMessenger } from "orchids-visual-edits";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -16,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "SIPASEN - Expertise Industrielle en PSE au Sénégal",
-  description: "Leader de la transformation du Polystyrène Expansé au Sénégal. Solutions d'isolation et d'emballage haute performance.",
+  description:
+    "Leader de la transformation du Polystyrène Expansé au Sénégal. Solutions d'isolation et d'emballage haute performance.",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
@@ -36,7 +36,6 @@ export default function RootLayout({
           data-orchids-project-id="83509869-f90f-4933-8bf2-ca5e3d6ade4f"
         />
           {children}
-          {/* <VisualEditsMessenger /> */}
         </body>
     </html>
   );

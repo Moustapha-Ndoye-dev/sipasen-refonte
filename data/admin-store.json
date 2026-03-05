@@ -1,0 +1,16 @@
+{
+  "siteContent": {
+    "contact": {
+      "directCommercial": "+221 71 010 43 43",
+      "fixe": "+221 33 832 31 21",
+      "email": "commercial@sipasen.sn"
+    },
+    "stats": {
+      "productionVolume": "400",
+      "productionUnit": "T",
+      "productionLabel": "Volume de Production Annuelle",
+      "productionLines": "5"
+    }
+  },
+  "contactRequests": []
+}
