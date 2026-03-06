@@ -21,7 +21,7 @@ const STORE_PATH = path.join(process.cwd(), "data", "admin-store.json");
 const DEFAULT_CONTACT: ContactConfig = {
   directCommercial: "+221 71 010 43 43",
   fixe: "+221 33 832 31 21",
-  email: "commercial@sipasen.sn",
+  email: "commercial@sipasen.com",
 };
 
 const DEFAULT_STATS: StatsConfig = {

@@ -9,7 +9,7 @@ type HeaderProps = {
   contactEmail?: string;
 };
 
-export default function Header({ contactEmail = "commercial@sipasen.sn" }: HeaderProps) {
+export default function Header({ contactEmail = "commercial@sipasen.com" }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 

@@ -13,7 +13,7 @@ type FooterProps = {
 const defaultContact: ContactConfig = {
   directCommercial: "+221 71 010 43 43",
   fixe: "+221 33 832 31 21",
-  email: "commercial@sipasen.sn",
+  email: "commercial@sipasen.com",
 };
 
 const Footer: React.FC<FooterProps> = ({ contact = defaultContact }) => {
